@@ -1,9 +1,24 @@
+import Link from 'next/link';
 import React from 'react';
+import NavLinks from './NavLinks';
 
 const Navbar = () => {
+  const navLinks =(
+    <>
+     <li className='text-[#C2F800]'>
+  <NavLinks href={"/"} > Workouts</NavLinks> 
+  </li>
+  <li>
+  <NavLinks href={"/myplan"} >My Plan</NavLinks> 
+  </li>
+  
+  </>
+  )
+
+
   return (
     <div>
-      <div className="navbar  container mx-auto bg-base-100 shadow-sm">
+      <div className="navbar   bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -12,36 +27,33 @@ const Navbar = () => {
       <ul
         tabIndex={-1}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Workouts</a></li>
-        <li>
-          <a>My Plan</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
+        {navLinks}
         
       </ul>
     </div>
+    <img
+      alt="Tailwind CSS hero component"
+      src="/assets/logo.png"
+      className="max-w-sm rounded-lg shadow-2xl"
+    />
     <a className="btn btn-ghost text-xl">FITLOG</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li className='text-[#C2F800]'><a>Workouts</a></li>
-      <li>
-        <details>
-          <summary>My Plan</summary>
-          <ul className="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-    
+    <ul className="menu menu-horizontal px-1">{navLinks}
+      
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <Link className='btn' href ={"/myplan"}>
+    {" "}
+    <button>Plan(0)</button>{" "}
+    </Link>
+    <Link className='btn' href ={"/myplan"}>
+    {" "}
+    <button>Saved(0)</button>{" "}
+    </Link>
+    
+   
   </div>
 </div>
     </div>

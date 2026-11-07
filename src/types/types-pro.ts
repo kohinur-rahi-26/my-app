@@ -13,3 +13,12 @@ export interface IProducts {
   description: string;
   instructions: string[];
 }
+
+import type { Dispatch, SetStateAction } from "react";
+
+export interface IProductsContext {
+  planList: IProducts[];
+  setPlanList: Dispatch<SetStateAction<IProducts[]>>;
+  savedList: IProducts[];
+  setSavedList: Dispatch<SetStateAction<IProducts[]>>;
+}

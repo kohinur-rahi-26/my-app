@@ -6,7 +6,7 @@ const Banner = () => {
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img
       alt="Tailwind CSS hero component"
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+      src="/assets/banner.png"
       className="max-w-sm rounded-lg shadow-2xl"
     />
     <div>
