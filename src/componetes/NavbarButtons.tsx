@@ -6,11 +6,11 @@ const NavbarButtons = () => {
     const{planList,savedList} = useProductContext()
     return (
        
-            <div >
-                <Link className='btn' href ={"/myplan"}>
+            <div className='flex items-center gap-3' >
+                <Link className='btn ' href ={"/myplan"}>
                 {" "}
-                <button>Plan</button>{" "}
-                <span>({planList.length})</span>
+                <button >Plan</button>{" "}
+                <span className='bg-[#b8eb01]'>({planList.length})</span>
                 </Link>
                 <Link className='btn' href ={"/myplan"}>
                 {" "}
