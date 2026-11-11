@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import NavLinks from './NavLinks';
+import NavbarButtons from './NavbarButtons';
 
 const Navbar = () => {
   const navLinks =(
@@ -43,17 +44,8 @@ const Navbar = () => {
       
     </ul>
   </div>
-  <div className="navbar-end">
-    <Link className='btn' href ={"/myplan"}>
-    {" "}
-    <button>Plan(0)</button>{" "}
-    </Link>
-    <Link className='btn' href ={"/myplan"}>
-    {" "}
-    <button>Saved(0)</button>{" "}
-    </Link>
-    
-   
+  <div className='navbar-end'>
+   <NavbarButtons />
   </div>
 </div>
     </div>
